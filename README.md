@@ -15,7 +15,7 @@ This repository is licensed under the [CREATIVE COMMONS ATTRIBUTION-NON-COMMERCI
 
 *When incorporating any content from this source, kindly ensure proper attribution by including the following citations at the beginning of the materials:*
 1. Repository: https://github.com/beardedeldo/SAC#training-programs
-2. Global Special Activities Center (SAC) Milsim Training Program: https://discord.gg/neXcdGx7
+2. Shadow Division Milsim: https://discord.gg/neXcdGx7
 
 <details>
   <summary><strong>CC BY-NC-ND</strong></summary>
