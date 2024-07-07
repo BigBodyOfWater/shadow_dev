@@ -1,0 +1,8 @@
+GameProject {
+ ID "ShadowScenarioTemplate"
+ GUID "61CF14F55AF171BC"
+ TITLE "ShadowScenarioTemplate"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
