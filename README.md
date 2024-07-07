@@ -69,7 +69,7 @@ Brief definitions: (refer to [Scenario Framework Tutorial](https://community.bis
 - **Area**
   - Description: Idea behind this is that your world/scenario is divided into several areas (as you can for example see on CombatOps Arland) and each area is handling its own things and has its purpose. Area has all the other components under it in its own hierarchy and it also serves with the Dynamic Spawn/Despawn as an enclosure.
 - **Slot**
- - Description: Use to spawn any Prefabs with specific purposes (e.g., US arsenal, Radio Tower, AIs, Faction spawn, etc)
+  - Description: Use to spawn any Prefabs with specific purposes (e.g., US arsenal, Radio Tower, AIs, Faction spawn, etc)
 - **Tasks**
   - Description: Use to create tasks and workflows. 
 - **Dynamic_spawn**
