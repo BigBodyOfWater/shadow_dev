@@ -5,7 +5,7 @@
 - We welcome contributions! If you have training materials, scenarios, or other resources to share, please fork the repository and submit a pull request. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo). If you want to join us on our journey to Arma 4: [https://discord.gg/shadowdivision](https://discord.gg/shadowdivision). 
 
 ## License and Change Log 
-- When you open up the project, you will see a README directory that contains a CHANGE_LOGS + LICENSE script. Please review these before starting any work. 
+- Choose a project to open (e.g., ShadowScenarioTemplate) in the Arma Reforger Worskhop. Note the README directory. This contains information about the Change Log and License. Please review these before starting any work. 
 
 ## Naming Conventions
 ### General Naming Convention
