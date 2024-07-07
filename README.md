@@ -22,46 +22,66 @@
 - **Test Server:** Deploy changes to the test server for broader testing.
 - **Dedicated Server:** Finally, deploy changes to the dedicated server for production use.
 
+## Refer to these resources often 
+- [Scenario Framework Tutorial](https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework_Setup_Tutorial) 
+- [Scenario Framework Documentation](https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework) 
+> Make sure to read the documentation and understand the basic hierarchical structure: 
+
+ **Basic_Layer**
+  - Area1 
+    - Layer1 
+      - Slot1
+      - Slot2
+
 ## World Editor Guidelines
-When working in the world editor, follow these guidelines to ensure consistency and organization. 
-> Initial testing will be performed in the `Arland.et` world as it's smaller and loads faster.
+When working in the world editor, you must follow the above recommended hierarchical structure. 
+> The set this up, click on worlds, load Arland.et > new world > save as sub-scene (new world). Plugins > Game Mode Setup > choose Conflict, Game Master or Scenario. This will set up the Mission Header and load in all the Prerequisites needed for each mode. 
 
-We will use the below format via "basic" Layers to set up a standardized working environment based on official [scenario framework documentation]https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework). The "basic" Layer  serves as a hierarchical tool to further divide things and it can contain other layers or slots. It is one of the most powerful entities that you will be using when building your scenario because it allows you to set the layout exactly how you will want it and knowing how it works will allow you to create all sorts of scenarios. 
-
-IMPORTANT: Please refer regularly to [scenario framework documentation]https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework) during development and testing. 
-
+Upon initial load in of the ShadowDevTemplate project you will see the following: 
 #### (World) Arland
+- a_Prerequisites
+  - Description: Holds basic prequisites/basic prefabs to allow development.
+> You can either choose a ScenarioFramework.conf or load the following required Prefabs yourself:
+```
+GameModeSF.et
+SCR_AIWorld.et
+FactionManager_USxUSSR.et
+LoadoutManager_USxUSSR.et
+RadioManager.et
+PerceptionManager.et
+ScriptedChatEntity.et
+TaskManager.et
+```
 
-- **Layer: Prerequisites**
- - Description: Holds basic prequisites/basic prefabs to allow development. 
-  - Choose either ScenarioFramework.conf or load the following required Prefabs: 
-    - GameModeSF.et
-    - SCR_AIWorld.et
-    - FactionManager_USxUSSR.et
-    - LoadoutManager_USxUSSR.et
-    - RadioManager.et
-    - PerceptionManager.et
-    - ScriptedChatEntity.et
-    - TaskManager.et
+- **aa_Start** ("Basic" Layer where initial spawn will occur). 
+  - Area_main_base
+    - Layer_base
+      - Slot_arsenal_us
+      - Slot_spawn_us
 
-- **Layer: Area**
+- **b_Tasks** (Will show tasks to be completed that can act as triggers). 
+  - Area1_move
+    - Base (Layer)
+      - LayerTaskMove1
+        - SlotMoveTo2
+
+Brief definitions: (refer to [Scenario Framework Tutorial](https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework_Setup_Tutorial) for more information) 
+- **Area**
   - Description: Idea behind this is that your world/scenario is divided into several areas (as you can for example see on CombatOps Arland) and each area is handling its own things and has its purpose. Area has all the other components under it in its own hierarchy and it also serves with the Dynamic Spawn/Despawn as an enclosure.
-- **Layer: Dynamic_spawn**
-  - Description: Use to save performance by spawning only things that need to be spawned.  
-- **Layer: Tasks**
-  - Description: Use to create tasks and workflows. 
-- **Layer: Slot**
+- **Slot**
  - Description: Use to spawn any Prefabs with specific purposes (e.g., US arsenal, Radio Tower, AIs, Faction spawn, etc)
-- **Layer: Plugins**
+- **Tasks**
+  - Description: Use to create tasks and workflows. 
+- **Dynamic_spawn**
+  - Description: Use to save performance by spawning only things that need to be spawned.  
+- **Plugins**
   - Description: Use to add more functionality to Slots (e.g., plugin activates once any slot is destroyed). 
-- **Layer: Logic**
+- **Logic**
   - Description: Use to develop more sophisticated workflows (e.g., count something and then execute an action via Actions).  
-- **Layer: Actions**
+- **Actions**
   - Description: Use to perform actions on AI or based on conditions (similar to a player or Game Master in game) (e.g., AIActions = add waypoint > do something when waypoint completed; Set skill, perception factor, formation, stance, movment type, etc). 
-- **Layer: QRF**
+- **QRF**
   - Description: Use to set up quick reaction force based on actions performed by a player or each time a threshold is reached. 
-
-### See Scenario [Samples](https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework#Samples). 
 
 ### Zen of Python Integration
 
