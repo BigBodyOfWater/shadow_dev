@@ -1,6 +1,6 @@
 ## Basic Setup
 For detailed visual guidance, check out these excellent walkthrough videos by Blackheart_six: [Blackheart_six YouTube Channel](https://www.youtube.com/@blackheart_six).
-> https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework_Setup_Tutorial?useskin=darkvector
+> [Scenario Framework BI Tutorial](https://community.bistudio.com/wiki/Arma_Reforger:Scenario_Framework_Setup_Tutorial?useskin=darkvector)
 > 
 
 1. **Create a Local Directory Structure**
@@ -66,7 +66,7 @@ For detailed visual guidance, check out these excellent walkthrough videos by Bl
 
 ## Overriding or Duplicating Items
 > Read and understand what can and cannot be **overriden** and **duplicated**: https://community.bistudio.com/wiki/Arma_Reforger:Data_Modding_Basics
-> Overriding:  	Override creates a new file which shares same GUID as original asset. This action allows to selectively replaces or add new elements to selected asset. 
+> Overriding: Override creates a new file which shares same GUID as original asset. This action allows to selectively replaces or add new elements to selected asset. 
 > Duplicating: Duplication creates a new file, with new, unique GUID. Duplicated file contains all the data from the original file (including inheritance) but doesn't modify in any way original file. 
 
 ## Duplicating Items from a Mod Example 
