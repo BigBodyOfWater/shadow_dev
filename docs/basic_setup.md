@@ -53,8 +53,9 @@ For detailed visual guidance, check out these excellent walkthrough videos by Bl
        - **1st NavmeshWorldComponent (Soldiers)**: `NavmeshFile = GM_Eden.nmm` (found in `worlds > GameMaster > navmeshes`)
        - **2nd NavmeshWorldComponent (BTRlike)**: `NavmeshFile = GM_Eden_vehicles.nmm` (found in `worlds > GameMaster > navmeshes`)
        - **3rd NavmeshWorldComponent (Lowres)**: `NavmeshFile = LowResEden.nmm` (found in `worlds > MP > navmeshes`)
-> Read: https://reforger.armaplatform.com/news/modding-update-june-7-2024
-> See additional Navmesh info: https://community.bistudio.com/wiki/Arma_Reforger:Navmesh_Tutorial 
+> Read [Navmesh update in 1.2](https://reforger.armaplatform.com/news/modding-update-june-7-2024) 
+
+> See [Navmesh Tutorial](https://community.bistudio.com/wiki/Arma_Reforger:Navmesh_Tutorial)
 
 5. **Set Up Respawn Logic**
    - Under `GameModeSF`, locate `SCR_RespawnSystemComponent`. 
@@ -63,10 +64,11 @@ For detailed visual guidance, check out these excellent walkthrough videos by Bl
 
 > This guide should now cover all necessary steps for setting up and creating a new project.
 
-
 ## Overriding or Duplicating Items
 > Read and understand what can and cannot be **overriden** and **duplicated**: https://community.bistudio.com/wiki/Arma_Reforger:Data_Modding_Basics
+
 > Overriding: Override creates a new file which shares same GUID as original asset. This action allows to selectively replaces or add new elements to selected asset. 
+
 > Duplicating: Duplication creates a new file, with new, unique GUID. Duplicated file contains all the data from the original file (including inheritance) but doesn't modify in any way original file. 
 
 ## Duplicating Items from a Mod Example 
@@ -76,8 +78,10 @@ For detailed visual guidance, check out these excellent walkthrough videos by Bl
 1. **Duplicate Items**
    - To obtain custom uniforms or duplicate soldiers from a mod, such as RHS, find the soldier you wish to customize. Right-click on the soldier and select `Duplicate` to create a local version in your working directory.
 > NOTE: you can duplicate various items this way, from guns, ammo, gear, etc. Then modify it to your needs. 
-> See Directory Structure: https://community.bistudio.com/wiki/Arma_Reforger:Directory_Structure
-> See Prefab basics: https://community.bistudio.com/wiki/Arma_Reforger:Prefabs_Basics?useskin=darkvector 
+
+> See [Directory Structure Basics](https://community.bistudio.com/wiki/Arma_Reforger:Directory_Structure)
+
+> See [Prefab basics](https://community.bistudio.com/wiki/Arma_Reforger:Prefabs_Basics?useskin=darkvector)
 
 2. **Customizing and Cataloging Entities**
    - Once you customize the duplicated soldier, ensure to duplicate the `Config/EntityCatalog`, and then add the custom soldier to the duplicated `Config/EntityCatalog`. This step prevents it from being overridden by the default settings from the original entity catalogue.
